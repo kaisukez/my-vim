@@ -35,3 +35,9 @@ if executable("ag")
 	let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
 endif
 let g:CtrlSpaceSearchTiming = 500
+
+" Undotree
+if has("persistent_undo")
+	set undodir=~/.undodir/
+	set undofile
+endif
