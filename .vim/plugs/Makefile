@@ -1,4 +1,4 @@
-ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace
+ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace undotree
 
 TMP = tmpfileH4J7
 
@@ -36,6 +36,10 @@ nerdtree:
 ctrlspace:
 	git clone https://github.com/vim-ctrlspace/vim-ctrlspace.git $(TMP)
 	mv $(TMP) ctrlspace
+
+undotree:
+	git clone https://github.com/mbbill/undotree.git $(TMP)
+	mv $(TMP) undotree
 
 fonts:
 	git clone https://github.com/powerline/fonts.git $(TMP)

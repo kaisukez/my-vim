@@ -13,6 +13,7 @@ Plug 'ctrlp'
 Plug 'ctrlspace'
 Plug 'easymotion'
 Plug 'nerdtree'
+Plug 'undotree'
 call plug#end()
 filetype plugin indent on
 
