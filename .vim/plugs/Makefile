@@ -1,4 +1,4 @@
-ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace undotree
+ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace undotree tmuxline
 
 TMP = tmpfileH4J7
 
@@ -44,6 +44,10 @@ undotree:
 fonts:
 	git clone https://github.com/powerline/fonts.git $(TMP)
 	mv $(TMP) fonts
+
+tmuxline:
+	git clone https://github.com/edkolev/tmuxline.vim.git $(TMP)
+	mv $(TMP) tmuxline
 
 clean:
 	rm -rf plug $(ALLPLUGINS) $(TMP) fonts

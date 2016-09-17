@@ -14,6 +14,7 @@ Plug 'ctrlspace'
 Plug 'easymotion'
 Plug 'nerdtree'
 Plug 'undotree'
+Plug 'tmuxline'
 call plug#end()
 filetype plugin indent on
 
