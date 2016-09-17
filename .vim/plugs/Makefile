@@ -2,7 +2,7 @@ ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspac
 
 TMP = tmpfileH4J7
 
-all: plug easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace
+all: plug $(ALLPLUGINS)
 
 .PHONY: $(ALLPLUGINS)
 
