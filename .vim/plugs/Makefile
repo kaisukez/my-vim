@@ -1,5 +1,5 @@
 ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace
-TMP = tmpfile
+TMP = tmpfileH4J7
 
 all: easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace
 
@@ -33,5 +33,9 @@ ctrlspace:
 	git clone https://github.com/vim-ctrlspace/vim-ctrlspace.git $(TMP)
 	mv $(TMP) ctrlspace
 
+fonts:
+	git clone https://github.com/powerline/fonts.git $(TMP)
+	mv $(TMP) fonts
+
 clean:
-	rm -rf $(ALLPLUGINS) $(TMP)
+	rm -rf $(ALLPLUGINS) $(TMP) fonts
