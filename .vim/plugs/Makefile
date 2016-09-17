@@ -1,9 +1,13 @@
 ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace
+
 TMP = tmpfileH4J7
 
-all: easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace
+all: plug easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace
 
 .PHONY: $(ALLPLUGINS)
+
+plug:
+	git clone https://github.com/junegunn/vim-plug.git plug
 
 easymotion:
 	git clone https://github.com/easymotion/vim-easymotion.git $(TMP)
@@ -38,4 +42,4 @@ fonts:
 	mv $(TMP) fonts
 
 clean:
-	rm -rf $(ALLPLUGINS) $(TMP) fonts
+	rm -rf plug $(ALLPLUGINS) $(TMP) fonts
