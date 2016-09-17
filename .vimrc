@@ -37,6 +37,7 @@ endif
 let g:CtrlSpaceSearchTiming = 500
 
 " Undotree
+nnoremap <C-K> :UndotreeToggle<cr>
 if has("persistent_undo")
 	set undodir=~/.undodir/
 	set undofile
