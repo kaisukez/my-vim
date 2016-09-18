@@ -38,7 +38,7 @@ endif
 let g:CtrlSpaceSearchTiming = 500
 
 " Undotree
-nnoremap <C-K> :UndotreeToggle<cr>
+nnoremap <C-k> :UndotreeToggle<cr>
 set undolevels=2000
 set undoreload=20000
 if has("persistent_undo")
@@ -49,3 +49,6 @@ endif
 " Tmux
 "let g:airline#extensions#tmuxline#enabled=0
 "let g:tmuxline_powerline_separators = 0
+
+" nerdtree
+nnoremap <C-l> :NERDTreeToggle<CR>
