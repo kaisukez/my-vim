@@ -4,6 +4,9 @@ set background=dark
 set number
 set tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab
 
+" fix vim 8.0 backspace problem when use insert mode
+set backspace=2
+
 call plug#begin('~/.vim/plugs')
 " you can vundle#begin('~/some/path/here')
 Plug 'airline'
@@ -52,3 +55,4 @@ endif
 
 " nerdtree
 nnoremap <C-l> :NERDTreeToggle<CR>
+
