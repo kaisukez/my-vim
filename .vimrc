@@ -1,4 +1,4 @@
-filetype off
+"filetype off
 set nocompatible
 set background=dark
 set number
@@ -18,6 +18,7 @@ Plug 'easymotion'
 Plug 'nerdtree'
 Plug 'undotree'
 Plug 'tmuxline'
+Plug 'tagbar'
 call plug#end()
 filetype plugin indent on
 
@@ -56,3 +57,8 @@ endif
 " nerdtree
 nnoremap <C-l> :NERDTreeToggle<CR>
 
+" tagbar
+filetype on
+let g:tagbar_ctags_bin='~/.vim/plugs/tagbar/ctags-5.8/ctags'
+let g:tagbar_left=1
+nnoremap <C-j> :TagbarToggle<CR>

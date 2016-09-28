@@ -1,4 +1,4 @@
-ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace undotree 
+ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace undotree tagbar
 
 TMP = tmpfileH4J7
 
@@ -48,6 +48,10 @@ fonts:
 # tmuxline:
 #	git clone https://github.com/edkolev/tmuxline.vim.git $(TMP)
 #	mv $(TMP) tmuxline
+
+tagbar:
+	git clone https://github.com/majutsushi/tagbar.git $(TMP)
+	mv $(TMP) tagbar
 
 clean:
 	rm -rf plug $(ALLPLUGINS) $(TMP) fonts
