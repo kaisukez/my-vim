@@ -42,6 +42,8 @@ $ make easymotion
 And if you want to know which plugin you can install, you can use __cat__ or __less__ command to all plugin that I use.
 ```
 $ cat Makefile
+```
+```
 $ ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace undotree tagbar
 ```
 #### 5. Edit _.vimrc_
@@ -52,4 +54,4 @@ let g:tagbar_ctags_bin='~/.vim/plugs/tagbar/ctags-5.8/ctags'
 ```
 
 #### 6. Learn more about vim!
-Now you have set everything up. Next step is to learn vim. Sometimes you will find that this tutorial is too hard or you don't understand some of them, don't worry, you can search google to find the answer. If you want to learn about vim, you have to research alot, read everything, try every shortcut keys and try some plugins you want, customize your _.vimrc_. When you have learned some basics of vim, you will enjoy using vim and love vim like me.
+Now you have set everything up. Next step is to learn vim. Sometimes you have a ploblem with this tutorial or you don't understand some of them, don't worry, there's google, so you can find the answer there. If you want to learn about vim, you have to research alot, read everything, try every shortcut keys and try some plugins you want, customize your _.vimrc_. When you have learned some basics of vim, you will enjoy using vim and love vim like me.
