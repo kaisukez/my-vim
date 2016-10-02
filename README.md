@@ -60,4 +60,4 @@ let g:tagbar_ctags_bin='~/.vim/plugs/tagbar/ctags-5.8/ctags'
 ```
 
 #### 6. Learn more about vim!
-Now you have set everything up. Next step is to learn vim. Sometimes you have a ploblem with this tutorial or you don't understand some of them, don't worry, there's google, so you can find the answer there. If you want to learn about vim, you have to research alot, read everything, try every shortcut keys and try some plugins you want, customize your _.vimrc_. When you have learned some basics, you will enjoy using vim and love vim like me.
+Now you have set everything up. Next step is to learn vim, learn how to install plugins, learn how to edit __.vimrc__. Sometimes you have a ploblem with this tutorial or you don't understand some of them, don't worry, there's google, so you can find the answer there. If you want to learn about vim, you have to research alot, read everything, try every shortcut keys and try some plugins you want, customize your _.vimrc_. When you have learned some basics, you will enjoy using vim and love vim like me.
