@@ -7,8 +7,8 @@ set tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab
 " tab
 nnoremap <C-h> :tabp<CR>
 nnoremap <C-l> :tabn<CR>
-nnoremap <C-n> :tabnew<CR>
-nnoremap <C-m> :tabclose<CR>
+nnoremap <C-j> :tabnew<CR>
+nnoremap <C-k> :tabclose<CR>
 
 " fix vim 8.0 backspace problem when use insert mode
 set backspace=2
@@ -48,7 +48,7 @@ endif
 let g:CtrlSpaceSearchTiming = 500
 
 " Undotree
-nnoremap <C-k> :UndotreeToggle<cr>
+nnoremap <C-m> :UndotreeToggle<cr>
 set undolevels=2000
 set undoreload=20000
 if has("persistent_undo")
@@ -61,10 +61,13 @@ endif
 "let g:tmuxline_powerline_separators = 0
 
 " nerdtree
-nnoremap <C-j> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 "tagbar
 "filetype on
 "let g:tagbar_ctags_bin='~/.vim/plugs/tagbar/ctags-5.8/ctags'
 "let g:tagbar_left=1
 "nnoremap <C-j> :TagbarToggle<CR>
+
+" Ctrl-P
+"let g:ctrlp_working_path_mode = 'ra'
