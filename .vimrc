@@ -4,6 +4,12 @@ set background=dark
 set number
 set tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab
 
+" tab
+nnoremap <C-h> :tabp<CR>
+nnoremap <C-l> :tabn<CR>
+nnoremap <C-n> :tabnew<CR>
+nnoremap <C-m> :tabclose<CR>
+
 " fix vim 8.0 backspace problem when use insert mode
 set backspace=2
 
@@ -18,7 +24,7 @@ Plug 'easymotion'
 Plug 'nerdtree'
 Plug 'undotree'
 Plug 'tmuxline'
-Plug 'tagbar'
+"Plug 'tagbar'
 call plug#end()
 filetype plugin indent on
 
@@ -55,10 +61,10 @@ endif
 "let g:tmuxline_powerline_separators = 0
 
 " nerdtree
-nnoremap <C-l> :NERDTreeToggle<CR>
+nnoremap <C-j> :NERDTreeToggle<CR>
 
-" tagbar
-filetype on
-let g:tagbar_ctags_bin='~/.vim/plugs/tagbar/ctags-5.8/ctags'
-let g:tagbar_left=1
-nnoremap <C-j> :TagbarToggle<CR>
+"tagbar
+"filetype on
+"let g:tagbar_ctags_bin='~/.vim/plugs/tagbar/ctags-5.8/ctags'
+"let g:tagbar_left=1
+"nnoremap <C-j> :TagbarToggle<CR>
