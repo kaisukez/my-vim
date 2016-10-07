@@ -24,6 +24,7 @@ Plug 'easymotion'
 Plug 'nerdtree'
 Plug 'undotree'
 Plug 'tmuxline'
+Plug 'numbertoggle'
 "Plug 'tagbar'
 call plug#end()
 filetype plugin indent on
@@ -71,3 +72,6 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Ctrl-P
 "let g:ctrlp_working_path_mode = 'ra'
+
+" Number Toggle
+let g:NumberToggleTrigger = '<C-i>'
