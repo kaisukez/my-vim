@@ -1,4 +1,4 @@
-ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace undotree tagbar numbertoggle
+ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace undotree tagbar
 
 TMP = tmpfileH4J7
 
@@ -52,10 +52,6 @@ fonts:
 tagbar:
 	@git clone https://github.com/majutsushi/tagbar.git $(TMP)
 	@mv $(TMP) tagbar
-
-numbertoggle:
-	@git clone https://github.com/jeffkreeftmeijer/vim-numbertoggle.git $(TMP)
-	@mv $(TMP) numbertoggle
 
 clean:
 	@rm -rf plug $(ALLPLUGINS) $(TMP) fonts
