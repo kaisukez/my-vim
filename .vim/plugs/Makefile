@@ -1,4 +1,4 @@
-ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace undotree tagbar
+ALLPLUGINS = easymotion ctrlp autoformat airline airline-theme nerdtree ctrlspace undotree tagbar surround
 
 TMP = tmpfileH4J7
 
@@ -52,6 +52,10 @@ fonts:
 tagbar:
 	@git clone https://github.com/majutsushi/tagbar.git $(TMP)
 	@mv $(TMP) tagbar
+
+surround:
+	@git clone https://github.com/tpope/vim-surround.git
+	@mv $(TMP) surround
 
 clean:
 	@rm -rf plug $(ALLPLUGINS) $(TMP) fonts
