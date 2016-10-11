@@ -36,8 +36,8 @@ Plug 'ctrlspace'
 Plug 'easymotion'
 Plug 'nerdtree'
 Plug 'undotree'
-Plug 'tmuxline'
 Plug 'surround'
+"Plug 'tmuxline'
 "Plug 'tagbar'
 call plug#end()
 filetype plugin indent on
