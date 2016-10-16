@@ -54,7 +54,7 @@ tagbar:
 	@mv $(TMP) tagbar
 
 surround:
-	@git clone https://github.com/tpope/vim-surround.git
+	@git clone https://github.com/tpope/vim-surround.git $(TMP)
 	@mv $(TMP) surround
 
 clean:
