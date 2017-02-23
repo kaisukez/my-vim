@@ -73,6 +73,22 @@ int toBase(int num, int base){
 	return stringToInt(res);
 }
 
+void genCoins(int middle, char *coins, int length){
+	char *middleS = new char[31];
+	intToString(toBase(middle, 2), middleS);
+	*coins = '1';
+	coins++;
+	for(int i = 0; i < length - 2; i++){
+		*coins = *middleS;
+		coins++;
+		middleS++;
+	}
+	*coins = '1';
+	coins++;
+	*coins = '\0';
+	delete middleS;
+}
+
 int main(int argc, char **argv){
 	ifstream fileInput;
 	ofstream fileOutput;
@@ -82,9 +98,12 @@ int main(int argc, char **argv){
 	fileInput >> T;
 
 	int N, J;
+	char coins[33];
 	for(int i = 0; i < T; i++){
-		fileInput >> N >> J;
+		//fileInput >> N >> J;
 	}
+	genCoins(0, coins, 5);
+	cout << coins << endl;
 
 	fileInput.close();
 	fileOutput.close();
