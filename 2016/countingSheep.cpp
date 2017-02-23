@@ -108,5 +108,6 @@ int main(int argc, char **argv){
 	}
 	printResult(output, sizeof(output)/sizeof(int));
 	writeResult(output, sizeof(output)/sizeof(int), file2);
+	delete inputC;
 	file.close();
 }
