@@ -62,7 +62,7 @@ endif
 let g:CtrlSpaceSearchTiming = 500
 
 " Undotree
-nnoremap <C-m> :UndotreeToggle<cr>
+"nnoremap <C-m> :UndotreeToggle<cr>
 set undolevels=2000
 set undoreload=20000
 if has("persistent_undo")
