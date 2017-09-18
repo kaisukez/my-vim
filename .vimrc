@@ -1,87 +1,81 @@
-"filetype off
 set nocompatible
-set background=dark
+filetype off
+
 set number
 set tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab
+set belloff=all
+set background=dark
 
-" tab
-nnoremap <C-h> :tabp<CR>
-nnoremap <C-l> :tabn<CR>
-nnoremap <C-j> :tabnew<CR>
-nnoremap <C-k> :tabclose<CR>
+" set term=xterm
+" set t_Co=256
+" let &t_AB="\e[48;5;%dm"
+" let &t_AF="\e[38;5;%dm"
+
+" if !empty($CONEMUBUILD)
+    " set term=pcansi
+    " set t_Co=256
+    " let &t_AB="\e[48;5;%dm"
+    " let &t_AF="\e[38;5;%dm"
+    " set bs=indent,eol,start
+    " colorscheme wombat256
+" endif    
+
 
 " fix vim 8.0 backspace problem when use insert mode
 set backspace=2
 
-" Number Toggle
-function! NumberToggle()
-	if(&number == 1)
-		set nonumber
-		set relativenumber
-	elseif(&relativenumber == 1)
-		set number
-		set norelativenumber
-	endif
-endfunction
+ " Number Toggle                     
+ function! NumberToggle()            
+     if(&number == 1)                
+         set nonumber                
+         set relativenumber          
+     elseif(&relativenumber == 1)    
+         set number                  
+         set norelativenumber        
+     endif                           
+ endfunction                         
+ nnoremap <C-i> :call NumberToggle()<CR>
 
-nnoremap <C-i> :call NumberToggle()<CR>
-
-call plug#begin('~/.vim/plugs')
-" you can vundle#begin('~/some/path/here')
-Plug 'airline'
-Plug 'airline-theme'
-Plug 'autoformat'
-Plug 'ctrlp'
-Plug 'ctrlspace'
-Plug 'easymotion'
-Plug 'nerdtree'
-Plug 'undotree'
-Plug 'surround'
-"Plug 'tmuxline'
-"Plug 'tagbar'
-call plug#end()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'mbbill/undotree'
+	Plugin 'vim-airline/vim-airline'
+	Plugin 'ctrlpvim/ctrlp.vim'
+	" Plugin 'vim-syntastic/syntastic'
+	Plugin 'Chiel92/vim-autoformat'
+	" Plugin 'pangloss/vim-javascript'
+	" Plugin 'mxw/vim-jsx'
+call vundle#end()
 filetype plugin indent on
 
-" Airline
-set guifont=Liberation_Mono_for_Powerline:h10 
-set guifont=Liberation\ Mono\ for\ Powerline\ 10 
-let g:airline_powerline_fonts = 1
-set laststatus=2
-let g:airline_theme='cool'
+" For Undotree
+set undofile
+set undodir=~/.undo
+set undolevels=3000
+set undoreload=30000
+
+" For Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_section_warning = ''
-"let g:airline_section_b = '%{getcwd()}'
 
-" Control Space
-set nocompatible
-set hidden
-set showtabline=0
-if executable("ag")
-	let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
-endif
-let g:CtrlSpaceSearchTiming = 500
+" For Ctrl-P
+let g:ctrlp_clear_cache_on_exit = 0
 
-" Undotree
-"nnoremap <C-m> :UndotreeToggle<cr>
-set undolevels=2000
-set undoreload=20000
-if has("persistent_undo")
-	set undodir=~/.undodir/
-	set undofile
-endif
+" For Syntastic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
-" Tmux
-"let g:airline#extensions#tmuxline#enabled=0
-"let g:tmuxline_powerline_separators = 0
+" For Autoformat
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+noremap <F3> :Autoformat<CR>
 
-" nerdtree
-nnoremap <C-n> :NERDTreeToggle<CR>
-
-"tagbar
-"filetype on
-"let g:tagbar_ctags_bin='~/.vim/plugs/tagbar/ctags-5.8/ctags'
-"let g:tagbar_left=1
-"nnoremap <C-j> :TagbarToggle<CR>
-
-" Ctrl-P
-"let g:ctrlp_working_path_mode = 'ra'
+" For Vim JSX
+" let g:jsx_ext_required = 0
+" let g:formatterpath = ['/home/zykigi/.vim/bundle/vim-jsx/ftdetect', '/home/zykigi/.vim/bundle/vim-jsx/after/ftplugin', '/home/zykigi/.vim/bundle/vim-jsx/after/indent', '/home/zykigi/.vim/bundle/vim-jsx/after/syntax']
