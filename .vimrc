@@ -4,27 +4,12 @@ filetype off
 set number
 set tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab
 set belloff=all
-set background=dark
-
-" set term=xterm
-" set t_Co=256
-" let &t_AB="\e[48;5;%dm"
-" let &t_AF="\e[38;5;%dm"
-
-" if !empty($CONEMUBUILD)
-    " set term=pcansi
-    " set t_Co=256
-    " let &t_AB="\e[48;5;%dm"
-    " let &t_AF="\e[38;5;%dm"
-    " set bs=indent,eol,start
-    " colorscheme wombat256
-" endif    
-
+" set background=dark
 
 " fix vim 8.0 backspace problem when use insert mode
 set backspace=2
 
- " Number Toggle                     
+" Number Toggle                     
  function! NumberToggle()            
      if(&number == 1)                
          set nonumber                
@@ -36,46 +21,38 @@ set backspace=2
  endfunction                         
  nnoremap <C-i> :call NumberToggle()<CR>
 
+" map key to change buffer
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'mbbill/undotree'
 	Plugin 'vim-airline/vim-airline'
+	Plugin 'vim-airline/vim-airline-themes'
 	Plugin 'ctrlpvim/ctrlp.vim'
-	" Plugin 'vim-syntastic/syntastic'
-	Plugin 'Chiel92/vim-autoformat'
-	" Plugin 'pangloss/vim-javascript'
-	" Plugin 'mxw/vim-jsx'
+	Plugin 'easymotion/vim-easymotion'
+	Plugin 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
 
 " For Undotree
 set undofile
-set undodir=~/.undo
+set undodir=~/.undodir
 set undolevels=3000
 set undoreload=30000
 
 " For Airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='powerlineish'
+let g:airline_section_warning = ''
+let g:airline_powerline_fonts = 1
 
 " For Ctrl-P
 let g:ctrlp_clear_cache_on_exit = 0
 
-" For Syntastic
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
+" For Easymotion
 
-" For Autoformat
-let g:autoformat_autoindent = 0
-let g:autoformat_retab = 0
-let g:autoformat_remove_trailing_spaces = 0
-noremap <F3> :Autoformat<CR>
-
-" For Vim JSX
-" let g:jsx_ext_required = 0
-" let g:formatterpath = ['/home/zykigi/.vim/bundle/vim-jsx/ftdetect', '/home/zykigi/.vim/bundle/vim-jsx/after/ftplugin', '/home/zykigi/.vim/bundle/vim-jsx/after/indent', '/home/zykigi/.vim/bundle/vim-jsx/after/syntax']
+" For Nerdtree
+nnoremap <C-n> :NERDTreeToggle<CR>
