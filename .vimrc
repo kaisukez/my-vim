@@ -34,6 +34,7 @@ call vundle#begin()
 	Plugin 'ctrlpvim/ctrlp.vim'
 	Plugin 'easymotion/vim-easymotion'
 	Plugin 'scrooloose/nerdtree'
+	Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin indent on
 
