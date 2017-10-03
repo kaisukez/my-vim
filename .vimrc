@@ -36,6 +36,7 @@ call vundle#begin()
 	Plugin 'scrooloose/nerdtree'
 	Plugin 'tpope/vim-fugitive'
 	Plugin 'tpope/vim-surround'
+	Plugin 'scrooloose/nerdcommenter'
 call vundle#end()
 filetype plugin indent on
 
@@ -58,3 +59,11 @@ let g:ctrlp_clear_cache_on_exit = 0
 
 " For Nerdtree
 nnoremap <C-n> :NERDTreeToggle<CR>
+
+" For Fugitive
+
+" For Surround
+
+" For Nerd Commenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
