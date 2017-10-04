@@ -25,6 +25,12 @@ set backspace=2
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
 
+" map key to change window size
+nnoremap <leader>a 8<C-w><
+nnoremap <leader>f 8<C-w>>
+nnoremap <leader>s 5<C-w>-
+nnoremap <leader>d 5<C-w>+
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
