@@ -5,6 +5,7 @@ set number
 set tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab
 set belloff=all
 " set background=dark
+" set term=screen-256color
 
 " fix vim 8.0 backspace problem when use insert mode
 set backspace=2
@@ -43,6 +44,8 @@ call vundle#begin()
 	Plugin 'tpope/vim-fugitive'
 	Plugin 'tpope/vim-surround'
 	Plugin 'scrooloose/nerdcommenter'
+	Plugin 'pangloss/vim-javascript'
+	Plugin 'mxw/vim-jsx'
 call vundle#end()
 filetype plugin indent on
 
@@ -73,3 +76,7 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 " For Nerd Commenter
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
+
+" For vim-jsx
+" fixed javascript es6 syntax highlight
+let g:jsx_ext_required = 0
