@@ -46,6 +46,7 @@ call vundle#begin()
 	Plugin 'scrooloose/nerdcommenter'
 	Plugin 'pangloss/vim-javascript'
 	Plugin 'mxw/vim-jsx'
+	Plugin 'joukevandermaas/vim-ember-hbs'
 call vundle#end()
 filetype plugin indent on
 
@@ -80,3 +81,5 @@ let g:NERDSpaceDelims = 1
 " For vim-jsx
 " fixed javascript es6 syntax highlight
 let g:jsx_ext_required = 0
+
+" For Vim Ember Hbs
