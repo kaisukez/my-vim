@@ -11,20 +11,29 @@ set belloff=all
 set backspace=2
 
 " Number Toggle                     
- function! NumberToggle()            
-     if(&number == 1)                
-         set nonumber                
-         set relativenumber          
-     elseif(&relativenumber == 1)    
-         set number                  
-         set norelativenumber        
-     endif                           
- endfunction                         
- nnoremap <C-i> :call NumberToggle()<CR>
+function! NumberToggle()            
+ if(&number == 1)                
+	 set nonumber                
+	 set relativenumber          
+ elseif(&relativenumber == 1)    
+	 set number                  
+	 set norelativenumber        
+ endif                           
+endfunction                         
+nnoremap <c-i> :call NumberToggle()<CR>
 
 " map key to change buffer
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
+nnoremap <C-j> :tabp<CR>
+nnoremap <C-k> :tabn<CR>
+
+" Change buffer shortcut
+nnoremap <leader>g :CtrlPBuffer<CR>
+
+" Tab Management
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>c :tabclose<CR>
 
 " map key to change window size
 nnoremap <leader>a 8<C-w><
