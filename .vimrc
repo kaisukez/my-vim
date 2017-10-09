@@ -12,13 +12,13 @@ set backspace=2
 
 " Number Toggle                     
 function! NumberToggle()            
- if(&number == 1)                
-	 set nonumber                
-	 set relativenumber          
- elseif(&relativenumber == 1)    
-	 set number                  
-	 set norelativenumber        
- endif                           
+	if(&number == 1)                
+		set nonumber                
+		set relativenumber          
+	elseif(&relativenumber == 1)    
+		set number                  
+		set norelativenumber        
+	endif                           
 endfunction                         
 nnoremap <c-i> :call NumberToggle()<CR>
 
