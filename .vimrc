@@ -20,7 +20,7 @@ function! NumberToggle()
 		set norelativenumber        
 	endif                           
 endfunction                         
-nnoremap <c-i> :call NumberToggle()<CR>
+nnoremap <C-u> :call NumberToggle()<CR>
 
 " map key to change buffer
 nnoremap <C-h> :bp<CR>
@@ -40,6 +40,10 @@ nnoremap <leader>a 8<C-w><
 nnoremap <leader>f 8<C-w>>
 nnoremap <leader>s 5<C-w>-
 nnoremap <leader>d 5<C-w>+
+
+" map key to change window faster
+nnoremap <TAB> <C-w>
+nnoremap <TAB><TAB> <C-w><C-w>
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
