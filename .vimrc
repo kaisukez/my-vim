@@ -59,7 +59,8 @@ call vundle#begin()
 	Plugin 'scrooloose/nerdcommenter'
 	Plugin 'pangloss/vim-javascript'
 	Plugin 'mxw/vim-jsx'
-	Plugin 'joukevandermaas/vim-ember-hbs'
+	" Plugin 'joukevandermaas/vim-ember-hbs'
+	Plugin 'mustache/vim-mustache-handlebars'
 call vundle#end()
 filetype plugin indent on
 
