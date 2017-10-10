@@ -6,4 +6,4 @@ rm -rf tempFolder123HAHAEIEI
 
 git clone https://github.com/powerline/fonts.git tempFolder456HAHAEIEI --depth=1
 sh tempFolder456HAHAEIEI/install.sh
-rm -rf fonts
+rm -rf fonts tempFolder456HAHAEIEI
