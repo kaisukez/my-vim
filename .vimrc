@@ -1,5 +1,6 @@
 set nocompatible
 filetype off
+syntax on
 
 set number
 set tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab
