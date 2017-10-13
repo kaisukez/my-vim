@@ -1,2 +1,3 @@
+
 # disable <C-s> and <C-q> for using vim shortcuts
 stty -ixon
