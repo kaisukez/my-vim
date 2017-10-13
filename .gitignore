@@ -1,0 +1,8 @@
+*
+!.gitignore
+!.undodir/.gitignore
+!.vim/bundle/.gitignore
+!.bashrc.formyvim
+!.vimrc
+!README.MD
+!myvim-install.sh
