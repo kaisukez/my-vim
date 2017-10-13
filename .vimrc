@@ -98,3 +98,6 @@ let g:NERDSpaceDelims = 1
 let g:jsx_ext_required = 0
 
 " For Vim Ember Hbs
+
+" For Mustache Handlebars
+au BufReadPost *.hbs set syntax=mustache
